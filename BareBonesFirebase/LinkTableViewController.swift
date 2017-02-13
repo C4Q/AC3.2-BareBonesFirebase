@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseStorage
 
 class LinkTableViewController: UITableViewController {
     var databaseReference: FIRDatabaseReference!
@@ -16,15 +17,25 @@ class LinkTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.databaseReference = FIRDatabase.database().reference().child("links")
+        getLinks()
+        
+        tableView.estimatedRowHeight = 200
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getLinks()
+    }
 
     func getLinks() {
         databaseReference.observeSingleEvent(of: .value, with: { (snapshot) in
+            var newLinks: [Link] = []
             for child in snapshot.children {
                 dump(child)
                 if let snap = child as? FIRDataSnapshot,
@@ -32,9 +43,10 @@ class LinkTableViewController: UITableViewController {
                     let link = Link(key: snap.key,
                                     url: valueDict["url"] ?? "",
                                     comment: valueDict["comment"] ?? "")
-                    self.links.append(link)
+                    newLinks.append(link)
                 }
             }
+            self.links = newLinks
             self.tableView.reloadData()
         })
     }
