@@ -10,6 +10,7 @@ import UIKit
 
 class LinkTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var linkImageView: UIImageView!
     @IBOutlet weak var linkLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     override func awakeFromNib() {

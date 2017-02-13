@@ -90,23 +90,32 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu6-41-UbE">
-                                            <rect key="frame" x="20" y="62" width="347" height="38.5"/>
+                                            <rect key="frame" x="20" y="62" width="42" height="38.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOv-Mt-fZN">
+                                            <rect key="frame" x="276" y="16" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="5Bi-bb-nty"/>
+                                                <constraint firstAttribute="width" constant="80" id="tRi-Qx-XQ9"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Gu6-41-UbE" firstAttribute="top" secondItem="qo1-0f-dU8" secondAttribute="bottom" constant="19" id="6dc-GY-ycv"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Gu6-41-UbE" secondAttribute="bottom" id="BOt-qn-Cpj"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Gu6-41-UbE" secondAttribute="trailing" id="Uhi-lM-AaN"/>
                                         <constraint firstItem="Gu6-41-UbE" firstAttribute="leading" secondItem="qo1-0f-dU8" secondAttribute="leading" id="YLZ-M4-gzX"/>
+                                        <constraint firstItem="bOv-Mt-fZN" firstAttribute="top" secondItem="qEE-iP-vlV" secondAttribute="topMargin" constant="8" id="cAw-4q-ePv"/>
                                         <constraint firstItem="qo1-0f-dU8" firstAttribute="leading" secondItem="qEE-iP-vlV" secondAttribute="leadingMargin" constant="12" id="mFc-zi-RBf"/>
                                         <constraint firstItem="qo1-0f-dU8" firstAttribute="top" secondItem="qEE-iP-vlV" secondAttribute="topMargin" constant="14" id="qK6-cL-0vV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bOv-Mt-fZN" secondAttribute="trailing" constant="11" id="tsi-yZ-yGi"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="commentLabel" destination="Gu6-41-UbE" id="gGM-Bs-diE"/>
+                                    <outlet property="linkImageView" destination="bOv-Mt-fZN" id="cDe-MW-BmA"/>
                                     <outlet property="linkLabel" destination="qo1-0f-dU8" id="Eoa-Iy-B0j"/>
                                 </connections>
                             </tableViewCell>

@@ -51,6 +51,7 @@ class LinkTableViewController: UITableViewController {
         })
     }
     
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -66,8 +67,24 @@ class LinkTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "linkCell", for: indexPath) as! LinkTableViewCell
 
-        cell.linkLabel.text = links[indexPath.row].url
-        cell.commentLabel.text = links[indexPath.row].comment
+        let link = links[indexPath.row]
+        cell.linkLabel.text = link.url
+        cell.commentLabel.text = link.comment
+        
+        let storage = FIRStorage.storage()
+        
+        // Create a storage reference from our storage service
+        let storageRef = storage.reference()//forURL: "gs://barebonesfirebase-6883d.appspot.com/")
+        let spaceRef = storageRef.child("images/\(link.key)")
+        spaceRef.data(withMaxSize: 1 * 1024 * 1024) { data, error in
+            if let error = error {
+                print(error)
+            } else {
+                // Data for "images/island.jpg" is returned
+                let image = UIImage(data: data!)
+                cell.linkImageView.image = image
+            }
+        }
         
         return cell
     }

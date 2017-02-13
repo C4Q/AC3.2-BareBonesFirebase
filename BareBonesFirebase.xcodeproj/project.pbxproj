@@ -17,6 +17,7 @@
 		1EA112E11E52193D004B66E3 /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA112E01E52193D004B66E3 /* LinkTableViewCell.swift */; };
 		1EA112E31E521AFC004B66E3 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA112E21E521AFC004B66E3 /* Link.swift */; };
 		1EA112E51E522079004B66E3 /* ShareLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA112E41E522079004B66E3 /* ShareLinkViewController.swift */; };
+		1EA112ED1E525ED9004B66E3 /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA112EC1E525ED9004B66E3 /* APIRequestManager.swift */; };
 		39D2F179ADBD28DF81D15350 /* Pods_BareBonesFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C44B3245AA3755B6AF19209F /* Pods_BareBonesFirebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		1EA112E01E52193D004B66E3 /* LinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewCell.swift; sourceTree = "<group>"; };
 		1EA112E21E521AFC004B66E3 /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		1EA112E41E522079004B66E3 /* ShareLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareLinkViewController.swift; sourceTree = "<group>"; };
+		1EA112EC1E525ED9004B66E3 /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		53922C7A0E88CF538BB8A9C4 /* Pods-BareBonesFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BareBonesFirebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-BareBonesFirebase/Pods-BareBonesFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		5425D4697CBAE29C2E46E2A8 /* Pods-BareBonesFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BareBonesFirebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BareBonesFirebase/Pods-BareBonesFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 		C44B3245AA3755B6AF19209F /* Pods_BareBonesFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BareBonesFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 				1EA112D61E5215E8004B66E3 /* Info.plist */,
 				1EA112DC1E52162B004B66E3 /* GoogleService-Info.plist */,
 				1EA112E21E521AFC004B66E3 /* Link.swift */,
+				1EA112EC1E525ED9004B66E3 /* APIRequestManager.swift */,
 			);
 			path = BareBonesFirebase;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				1EA112CD1E5215E7004B66E3 /* ViewController.swift in Sources */,
 				1EA112CB1E5215E7004B66E3 /* AppDelegate.swift in Sources */,
 				1EA112DF1E5217B7004B66E3 /* LinkTableViewController.swift in Sources */,
+				1EA112ED1E525ED9004B66E3 /* APIRequestManager.swift in Sources */,
 				1EA112E11E52193D004B66E3 /* LinkTableViewCell.swift in Sources */,
 				1EA112E51E522079004B66E3 /* ShareLinkViewController.swift in Sources */,
 				1EA112E31E521AFC004B66E3 /* Link.swift in Sources */,
